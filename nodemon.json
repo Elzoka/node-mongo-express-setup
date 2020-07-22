@@ -1,0 +1,13 @@
+{
+  "execMap": {
+    "ts": "babel-node -x \".ts\" -r dotenv/config"
+  },
+  "watch": ["src/**/*.{ts,tsx}"],
+  "env": {
+    "NODE_ENV": "dev",
+    "MONGODB_DEBUG": true,
+    "NODE_DEBUG": "server",
+    "DOTENV_CONFIG_PATH": "./src/config/dev.env"
+  },
+  "ext": "ts,json"
+}

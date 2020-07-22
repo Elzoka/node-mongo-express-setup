@@ -1,0 +1,6 @@
+{
+  "testEnvironment": "node",
+  "rootDir": "src",
+  "testMatch": ["**/?(*.)+(spec|test).[t]s?(x)"],
+  "setupFiles": ["dotenv/config"]
+}
