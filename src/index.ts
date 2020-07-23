@@ -1,7 +1,7 @@
 import { startServer } from './app';
-import { setupMongoose } from './utils/db';
-import log from './utils/logger';
-import config from './config';
+import { setupMongoose } from '(utils)/db';
+import log from '(utils)/logger';
+import config from '(config)';
 
 async function bootstrap(): Promise<void> {
   try {

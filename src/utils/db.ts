@@ -1,5 +1,5 @@
 import mongoose, { Mongoose } from 'mongoose';
-import log from '../utils/logger';
+import log from '(utils)/logger';
 
 const connectDB = (uri: string): Promise<Mongoose> => {
   return mongoose

@@ -1,4 +1,30 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-typescript"],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "(config)": "./src/config",
+          "(controllers)": "./src/controllers",
+          "(models)": "./src/models",
+          "(routes)": "./src/routes",
+          "(utils)": "./src/utils",
+          "(validation)": "./src/validation"
+        }
+      }
+    ]
+  ]
 }

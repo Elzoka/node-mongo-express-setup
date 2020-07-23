@@ -1,8 +1,8 @@
 import express from 'express';
 import { Server } from 'http';
 
-import routes from './routes';
-import log from './utils/logger';
+import routes from '(routes)';
+import log from '(utils)/logger';
 
 const app = express();
 
@@ -21,14 +21,17 @@ export async function startServer({ port }: StartServerOptions = {}): Promise<
   port = port && Number(port);
 
   if (!port) {
-    process.exit(1);
     // log
+    log.error(`Port variable doesn't exist`);
+
+    // exit
+    process.exit(1);
   }
 
   return new Promise((resolve) => {
     const server = app.listen(port, () => {
-      resolve(server);
       log.info(`Server is running on port ${port}`);
+      resolve(server);
     });
   });
 }
